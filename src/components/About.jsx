@@ -22,6 +22,7 @@ const skills = [
   { name: "PHP (basics)", category: "languages" },
   { name: "OCaml", category: "languages" },
   { name: "Prolog", category: "languages" },
+  { name: "SQL", category: "languages" },
   
   
 
@@ -30,6 +31,7 @@ const skills = [
   { name: "Git & GitHub", category: "tools" },
   { name: "VS Code", category: "tools" },
   { name: "Linux", category: "tools" },
+  { name: "PostgreSQL", category: "tools" },
 
   // Others
 
