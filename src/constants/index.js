@@ -1,7 +1,4 @@
-import {   
-    carrent,   
-  } from "../assets";
-
+import { carrent, decesFrance , SmallWorld} from "../assets";
 
   export const navLinks = [
     {
@@ -41,7 +38,30 @@ import {
       image: carrent,
       source_code_link: "https://github.com/parmidavr/FinanceTracker",
     },
-    
+    {
+      name: "Décès en France",
+      description:
+      "A data analysis project based on French mortality records. The application analyzes death statistics by year, age, and geographic location using structured datasets. It integrates an AI-powered assistant to help interpret results and includes data forecasting features to provide predictive insights based on historical trends.",
+     tags: [
+        { name: "Data", color: "blue-text-gradient" },
+        { name: "SQL", color: "green-text-gradient" },
+        { name: "Python", color: "pink-text-gradient" },
+      ],
+      image: decesFrance, // replace later with decesFrance if you add an image
+      source_code_link: "https://github.com/parmidavr/deces.git",
+    },
+    {
+      name: "Small World",
+      description:
+        "A tile-based strategy game inspired by constraint satisfaction mechanics. Players place tiles on a grid to fulfill multiple constraints and score points. The project features turn-based gameplay, dynamic scoring, and a complete game model including players, grids, tiles, and constraints.",
+      tags: [
+        { name: "Python", color: "blue-text-gradient" },
+        { name: "Swing(GUI)", color: "green-text-gradient" },
+        { name: "MVC", color: "pink-text-gradient" },
+      ],
+      image: SmallWorld, 
+      source_code_link: "https://github.com/parmidavr/SmallWorld.git",
+    },
    
   ];
   

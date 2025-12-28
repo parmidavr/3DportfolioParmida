@@ -27,7 +27,7 @@ const skills = [
   
 
   // Tools
-  { name: "QT Creator ", category: "tools" },
+  { name: "QT Creator(basics) ", category: "tools" },
   { name: "Git & GitHub", category: "tools" },
   { name: "VS Code", category: "tools" },
   { name: "Linux", category: "tools" },
