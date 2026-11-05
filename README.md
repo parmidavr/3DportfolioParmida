@@ -1,12 +1,73 @@
-# React + Vite
+# 3D Portfolio — Parmida Vaghar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! A modern, interactive 3D website where I share my background, technical skills, experience, and projects.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** [parmidavaghar.netlify.app](https://parmidavaghar.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About Me
 
-## Expanding the ESLint configuration
+I'm a Master's student in Computer Science at **Université Claude Bernard Lyon 1**, with a particular interest in **Data Science, Machine Learning, and Artificial Intelligence**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I enjoy exploring new technologies, solving problems, and building practical solutions that combine creativity with technical skills.
+
+## Tech Stack
+
+This portfolio was built using:
+
+- **React.js** — Component-based user interface
+- **Three.js & React Three Fiber** — Interactive 3D graphics
+- **Framer Motion** — Animations and transitions
+- **Tailwind CSS** — Responsive styling
+- **Vite** — Development and build tooling
+
+## Featured Projects
+
+### LLM Conversational Agent for Health Data Analysis
+*Research Project — LIRIS (CNRS) | In Progress*
+
+Developing an LLM-powered conversational agent designed to help clinicians and researchers explore health data through natural language, with a focus on Text-to-SQL, Python-based analysis, and machine learning.
+
+### Décès en France — Data Analytics Dashboard
+An interactive data analysis and visualization application exploring mortality statistics in France, using Python, Dash, Plotly, and SQL.
+
+### Finance Tracker
+A personal finance management application developed in C++ and Qt.
+
+### Small World
+A Java-based strategy game developed using Swing and the MVC architecture.
+
+## Professional Experience
+
+**Web Development Intern — Institut Jean-Louis Murat**  
+*May – July 2026*
+
+Worked on web development, data integration, and interactive geographic visualizations using WordPress, JavaScript, PHP, JSON, and Leaflet.js.
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/parmidavr/3DportfolioParmida.git
+cd 3DportfolioParmida
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Contact
+
+Feel free to explore my work or get in touch through my [portfolio](https://parmidavaghar.netlify.app/).
+
+---
+
+*Designed and developed by Parmida Vaghar.*
