@@ -16,6 +16,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  status,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -34,6 +35,7 @@ const ProjectCard = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
+        {source_code_link && (
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
@@ -46,9 +48,16 @@ const ProjectCard = ({
               />
             </div>
           </div>
+        )}
         </div>
 
         <div className='mt-5'>
+          {status && (
+            <span className='inline-block mb-3 px-3 py-1 rounded-full bg-[#915EFF]/20 text-[#b794ff] text-[12px] font-semibold'>
+              {status}
+            </span>
+          )}
+
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
@@ -83,9 +92,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          This space highlights my early work as a developer. While I'm still building experience, 
-          each project here has helped me strengthen my understanding of various technologies and development practices.
-
+        Here are some of the projects I've worked on, from software development to data analysis and AI. Each one has been an opportunity to explore new technologies, solve different challenges, and turn ideas into something practical.
 
         </motion.p>
       </div>

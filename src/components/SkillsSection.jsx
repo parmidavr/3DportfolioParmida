@@ -1,82 +1,105 @@
+
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 0, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
+  // Data Science & AI
+  { name: "Python", category: "data" },
+  { name: "SQL", category: "data" },
+  { name: "Data Visualization", category: "data" },
+  { name: "Dash", category: "data" },
+  { name: "Plotly", category: "data" },
 
+  // Programming
+  { name: "C++", category: "programming" },
+  { name: "Java", category: "programming" },
+  { name: "JavaScript", category: "programming" },
+  { name: "HTML / CSS", category: "programming" },
+  { name: "PHP", category: "programming" },
+  { name: "OCaml", category: "programming" },
+  { name: "Prolog", category: "programming" },
 
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  // Databases & Tools
+  { name: "PostgreSQL", category: "tools" },
+  { name: "JSON", category: "tools" },
+  { name: "Excel", category: "tools" },
+  { name: "Git / GitHub", category: "tools" },
+  { name: "Linux", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "IntelliJ IDEA", category: "tools" },
 
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  // Web & Software Development
+  { name: "React.js", category: "development" },
+  { name: "WordPress", category: "development" },
+  { name: "Elementor", category: "development" },
+  { name: "Leaflet.js", category: "development" },
+  { name: "Qt", category: "development" },
+  { name: "UML", category: "development" },
+  { name: "MVC Architecture", category: "development" },
+
+  // Spoken Languages
+  { name: "English — C1", category: "languages" },
+  { name: "French — C1", category: "languages" },
+  { name: "Persian — Native", category: "languages" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = [
+  { id: "all", label: "All" },
+  { id: "data", label: "Data Science & AI" },
+  { id: "programming", label: "Programming" },
+  { id: "tools", label: "Databases & Tools" },
+  { id: "development", label: "Web & Software" },
+  { id: "languages", label: "Languages" },
+];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) =>
+      activeCategory === "all" ||
+      skill.category === activeCategory
   );
+
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+    <section id="skills" className="py-16 px-4 relative">
+      <div className="max-w-5xl mx-auto">
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-white">
+          My <span className="text-[#915EFF]">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, key) => (
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {categories.map((category) => (
             <button
-              key={key}
-              onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
-              )}
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeCategory === category.id
+                  ? "bg-[#915EFF] text-white"
+                  : "bg-[#151030] text-[#aaa6c3] hover:text-white hover:bg-[#211747]"
+              }`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
+        {/* Skill cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {filteredSkills.map((skill) => (
             <div
-              key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              key={skill.name}
+              className="bg-[#151030] border border-[#30234d] rounded-xl p-5 text-center"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              <h3 className="text-white font-medium text-sm sm:text-base">
+                {skill.name}
+              </h3>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
- 

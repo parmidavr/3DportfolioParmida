@@ -1,4 +1,4 @@
-import { carrent, decesFrance , SmallWorld} from "../assets";
+import { carrent, decesFrance , SmallWorld, liris } from "../assets";
 
   export const navLinks = [
     {
@@ -9,6 +9,11 @@ import { carrent, decesFrance , SmallWorld} from "../assets";
       id: "projects",
       title: "Projects",
     },
+    {
+      id: "experience",
+      title: "Experience",
+    },
+
     {
       id: "contact",
       title: "Contact",
@@ -61,6 +66,21 @@ import { carrent, decesFrance , SmallWorld} from "../assets";
       ],
       image: SmallWorld, 
       source_code_link: "https://github.com/parmidavr/SmallWorld.git",
+    },
+
+    {
+      name: "LLM Conversational Agent for Health Data Analysis",
+      description:
+        "An ongoing research project at LIRIS (CNRS) focused on developing an LLM-powered conversational agent that helps clinicians and researchers explore and analyze health data through natural language. The agent aims to support Text-to-SQL queries, Python-based data analysis, supervised machine learning, and clustering, making complex data analysis more accessible to non-technical users.",
+      status: "In Progress",
+      tags: [
+        { name: "LLM", color: "blue-text-gradient" },
+        { name: "Python", color: "green-text-gradient" },
+        { name: "Machine Learning", color: "pink-text-gradient" },
+        { name: "Text-to-SQL", color: "blue-text-gradient" },
+      ],
+      image: liris,
+      source_code_link: null,
     },
    
   ];

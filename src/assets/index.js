@@ -6,6 +6,7 @@ import close from "./close.svg";
 import github from "./github.png";
 import decesFrance from "./decesFrance.png";
 import SmallWorld from "./SmallWorld.png";
+import liris from "./liris.png";
 export {
 
   github,
@@ -15,5 +16,6 @@ export {
   carrent,
   decesFrance,
   SmallWorld,
+  liris,
 };
 
